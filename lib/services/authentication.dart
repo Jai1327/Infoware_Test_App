@@ -11,8 +11,8 @@ class AuthenticationService {
 
     await _users.clear();
 
-    await _users.add(User('test1', '123'));
-    await _users.add(User('test2', '456'));
+    // await _users.add(User('test1', '123'));
+    // await _users.add(User('test2', '456'));
   }
 
   Future<String?> authUser(final String username, final String password) async {

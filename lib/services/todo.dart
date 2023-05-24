@@ -11,10 +11,10 @@ class TodoService {
 
     await _tasks.clear();
 
-    await _tasks.add(Task('test1', 'task 1', false));
-    await _tasks.add(Task('test1', 'task 2', true));
-    await _tasks.add(Task('test2', 'task 3', false));
-    await _tasks.add(Task('test2', 'task 55', true));
+    // await _tasks.add(Task('test1', 'task 1', false));
+    // await _tasks.add(Task('test1', 'task 2', true));
+    // await _tasks.add(Task('test2', 'task 3', false));
+    // await _tasks.add(Task('test2', 'task 55', true));
   }
 
   List<Task> getTasks(final String user) {
