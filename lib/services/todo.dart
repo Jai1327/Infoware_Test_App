@@ -30,7 +30,7 @@ class TodoService {
     }
   }
 
-  void removeTask(final String task, final String username) async {
+  Future<void> removeTask(final String task, final String username) async {
     final taskToRemove = _tasks.values.firstWhere(
         (element) => element.task == task && element.user == username);
     await taskToRemove.delete();

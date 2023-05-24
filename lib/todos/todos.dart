@@ -45,12 +45,26 @@ class TodoPage extends StatelessWidget {
                   ...state.tasks.map(
                     (e) => ListTile(
                       title: Text(e.task),
-                      trailing: Checkbox(
-                        value: e.completed,
-                        onChanged: (val) {
-                          BlocProvider.of<TodosBloc>(context)
-                              .add(ToggleTodoEvent(e.task));
-                        },
+                      trailing: Container(
+                        width: 100,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            Checkbox(
+                              value: e.completed,
+                              onChanged: (val) {
+                                BlocProvider.of<TodosBloc>(context)
+                                    .add(ToggleTodoEvent(e.task));
+                              },
+                            ),
+                            IconButton(
+                                onPressed: () {
+                                  BlocProvider.of<TodosBloc>(context)
+                                      .add(DeleteTodoEvent(e.task));
+                                },
+                                icon: const Icon(Icons.delete))
+                          ],
+                        ),
                       ),
                     ),
                   ),

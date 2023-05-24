@@ -32,3 +32,14 @@ class ToggleTodoEvent extends TodosEvent {
   @override
   List<Object?> get props => [todoTask];
 }
+
+class DeleteTodoEvent extends TodosEvent {
+  final String todoTask;
+  DeleteTodoEvent(this.todoTask) {
+    print("In the todo event");
+    print(todoTask);
+  }
+
+  @override
+  List<Object?> get props => [todoTask];
+}
